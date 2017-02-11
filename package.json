@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/luis15/brincandoDeApi#readme",
   "dependencies": {
+    "eslint": "^3.15.0",
     "express": "^4.14.1",
-    "nodemailer": "^3.0.2",
+    "nodemailer": "^2.7.0",
     "request": "^2.79.0"
   }
 }
