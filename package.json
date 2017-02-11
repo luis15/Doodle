@@ -18,6 +18,7 @@
   "homepage": "https://github.com/luis15/brincandoDeApi#readme",
   "dependencies": {
     "express": "^4.14.1",
+    "nodemailer": "^3.0.2",
     "request": "^2.79.0"
   }
 }
