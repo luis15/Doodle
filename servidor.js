@@ -8,7 +8,7 @@ app.post('/enviar', function (req, res) {
   console.log("POST");
    req.on('data', function (data) {
        var body = JSON.parse(data);
-       email.enviarEmailContato(body.destinatarios, body.assunto, body.mensagem);
+       email.enviarEmailContato(body.remetente, body.destinatarios, body.assunto, body.mensagem);
        res.writeHead(200, {'Content-Type': 'text/html'});
        res.end(JSON.stringify(body));
        /*.then((body)=>{
