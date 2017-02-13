@@ -8,9 +8,15 @@ app.post('/enviar', function (req, res) {
   console.log("POST");
    req.on('data', function (data) {
        var body = JSON.parse(data);
-       email.enviarEmailContato(body.remetente, body.destinatarios, body.assunto, body.mensagem);
-       res.writeHead(200, {'Content-Type': 'text/html'});
-       res.end(JSON.stringify(body));
+       if(body.senha == 'XdqhRgznkPbW6raRXwEE3ML'){
+         email.enviarEmailContato(body.remetente, body.destinatarios, body.assunto, body.mensagem);
+         res.writeHead(200, {'Content-Type': 'text/html'});
+         res.end(JSON.stringify(body));
+       }
+       else{
+         res.writeHead(401, {'Content-Type': 'text/html'});
+         res.end("Eu acho que você não deveria estar fazendo isso!");
+       }
        /*.then((body)=>{
          res.writeHead(200, {'Content-Type': 'text/html'});
          res.end(JSON.stringify(body));
